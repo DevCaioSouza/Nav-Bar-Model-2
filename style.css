@@ -39,7 +39,7 @@ header ul li{
 
 header ul li ul {
   position: absolute;
-  top: 66px;
+  top: 66px; /* altura do header */
   right: 0px;
   width: 180px;
   display: none;
@@ -47,6 +47,11 @@ header ul li ul {
 
 header ul li:hover ul{
   display: block;
+}
+
+header ul li a:hover {
+  background: #f2e8d5;
+  transition: 0.5s;
 }
 
 header ul li ul li{
@@ -72,4 +77,45 @@ header ul li a{
   padding: 21px;
   font-size: 1.1rem;
   text-decoration: none;
+}
+
+header i.menu-toggle{
+  display: none;
+}
+
+@media (max-width: 790px){
+  header{
+    position: relative;
+  }
+
+  header ul{
+    max-height: 0px;
+    width: 100%;
+    overflow: hidden;
+    
+  }
+
+  .showing {
+    max-height: 100em;
+  }
+
+  header i.menu-toggle{
+  display: block;
+  float: right;
+  margin: 20px;
+  font-size: 1.5em;
+}
+
+header ul li {
+  width: 100%;
+}
+
+header ul li ul{
+  position: static;
+  display: block;
+  width: 100%;
+
+}
+
+
 }
